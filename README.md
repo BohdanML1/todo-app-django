@@ -7,6 +7,14 @@ Simple CRUD application with user authentication.
 - Django
 - SQLite
 
+## 🔗 URL Structure
+| URL | Description |
+|------|-------------|
+| `/login/` | User login |
+| `/register/` | User registration |
+| `/tasks/` | Task list (CRUD) |
+
+
 ## ⚙️ Features
 - User registration & login
 - Create / Read / Update / Delete tasks
@@ -21,3 +29,20 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+
+
+## 📸 Screenshots
+### Login
+![Login](screenshots/login.png)
+
+### Register
+![Register](screenshots/register.png)
+
+### Task List
+![Task List](screenshots/task_list.png)
+
+### Create Task
+![Create Task](screenshots/task_create.png)
+
+### Update Task
+![Update Task](screenshots/task_update.png)

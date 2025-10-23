@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+  <p>Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+  <a href="{% url 'task_create' %}">Add Task</a>
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+<h1>Tasks</h1>
+<ul>
+  {% for task in tasks %}
+    <li>
+      {{ task.title }} - {% if task.completed %}Done{% else %}Pending{% endif %}
+      <a href="{% url 'task_update' task.id %}">Edit</a>
+      <a href="{% url 'task_delete' task.id %}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
